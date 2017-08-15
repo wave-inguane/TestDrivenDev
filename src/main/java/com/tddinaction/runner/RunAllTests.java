@@ -12,11 +12,10 @@ import junit.framework.JUnit4TestAdapter;
 public class RunAllTests {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		junit.textui.TestRunner.run(suite());
 	}
 	
-	// The suite() method helpful when using JUnit3 Test Runners or Ant.
+	// The suite() method is helpful when using JUnit3 Test Runners or Ant.
 	public static junit.framework.Test suite() {
 		return new JUnit4TestAdapter(RunAllTests.class);
 	}

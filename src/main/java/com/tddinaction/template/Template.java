@@ -6,12 +6,24 @@ import java.util.Map;
 
 public class Template {
 
+	
+	private String variableValue;
+	
 	public Template(String templateText) {
 	}
+	
 	public void set(String variable, String value) {
+		this.variableValue = value;
 	}
+	
 	public String evaluate() {
-	return null;
+	//1. return null; TEST: FAIL
+		
+	//2. Find the quickest and easiest way to make the test pass.
+	//return "Hello, Reader";//Hard-coding TEST: PASS
+	
+    //3.
+		return "Hello, " + this.variableValue;
 	}
 	
 	/*

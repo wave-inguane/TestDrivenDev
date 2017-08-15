@@ -8,15 +8,30 @@ import static org.junit.Assert.*;
 
 public class TestTemplate {
 
-	
+
 	@Test
 	public void oneVariable() throws Exception {
 		Template template = new Template("Hello, ${name}");
 		template.set("name", "Reader");
 		assertEquals("Hello, Reader", template.evaluate());
 	}
-	
-	
+
+	//Start triangulation
+	@Test public void differentValue() throws Exception {
+		Template template = new Template("Hello, ${name}");
+		template.set("name", "someone else");
+		assertEquals("Hello, someone else", template.evaluate());
+	}
+
+
+	//Continue with triangulation to squeeze our more hard coding
+	@Test public void differentTemplate() throws Exception {
+		Template template = new Template("Hi, ${name}");
+		template.set("name", "someone else");
+		assertEquals("Hi, someone else", template.evaluate());
+	}
+
+
 	/*
     private Template template;
 
